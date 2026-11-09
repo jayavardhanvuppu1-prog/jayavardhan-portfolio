@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Vuppu Jayavardhan, B.Tech Computer Science Engineering student." />
+  <title>Vuppu Jayavardhan | Student Portfolio</title>
+  <style>
+    :root {
+      --bg: #080d18; --panel: #101a2b; --text: #edf3ff; --muted: #a8b5ca;
+      --accent: #64b5ff; --accent2: #8b7cff; --line: rgba(255,255,255,.10);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif;
+      color: var(--text); background:
+        radial-gradient(circle at 85% 10%, rgba(100,181,255,.15), transparent 28rem),
+        radial-gradient(circle at 10% 35%, rgba(139,124,255,.12), transparent 25rem), var(--bg);
+      line-height: 1.65;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1080px, 90%); margin: auto; }
+    header { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(16px); background: rgba(8,13,24,.82); border-bottom: 1px solid var(--line); }
+    nav { min-height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { font-weight: 800; letter-spacing: .3px; }
+    .brand span { color: var(--accent); }
+    .navlinks { display: flex; gap: 22px; flex-wrap: wrap; color: var(--muted); font-size: .92rem; }
+    .navlinks a:hover { color: var(--accent); }
+    .hero { min-height: 78vh; display: grid; align-items: center; padding: 90px 0 70px; }
+    .eyebrow { color: var(--accent); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: .78rem; }
+    h1 { font-size: clamp(2.6rem, 7vw, 5.2rem); line-height: 1.08; margin: 18px 0; letter-spacing: -2px; }
+    h1 span { background: linear-gradient(90deg, var(--accent), #b5aaff); -webkit-background-clip: text; color: transparent; }
+    .lead { color: var(--muted); max-width: 650px; font-size: 1.12rem; }
+    .actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 30px; }
+    .btn { display: inline-flex; padding: 11px 19px; border-radius: 10px; font-weight: 700; border: 1px solid var(--line); }
+    .primary { color: #07111f; background: linear-gradient(100deg, var(--accent), #a9a0ff); border: 0; }
+    .section { padding: 72px 0; }
+    .section h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 10px; }
+    .sub { color: var(--muted); margin-bottom: 28px; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; }
+    .card { background: linear-gradient(145deg, rgba(16,26,43,.96), rgba(13,21,36,.88)); border: 1px solid var(--line); border-radius: 18px; padding: 24px; }
+    .card h3 { margin-bottom: 8px; }
+    .card p, .card li { color: var(--muted); }
+    .tags { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 14px; }
+    .tag { font-size: .85rem; color: #c9ddf7; border: 1px solid rgba(100,181,255,.25); background: rgba(100,181,255,.08); padding: 5px 11px; border-radius: 99px; }
+    ul { padding-left: 20px; }
+    .contact a { color: var(--accent); overflow-wrap: anywhere; }
+    footer { border-top: 1px solid var(--line); padding: 24px 0; color: var(--muted); text-align: center; font-size: .9rem; }
+    @media (max-width: 700px) {
+      nav { align-items: flex-start; flex-direction: column; padding: 14px 0; }
+      .navlinks { gap: 13px; font-size: .85rem; }
+      .hero { min-height: 68vh; padding-top: 65px; }
+      .grid { grid-template-columns: 1fr; }
+      h1 { letter-spacing: -1px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="wrap">
+      <a class="brand" href="#home">VJ<span>.</span></a>
+      <div class="navlinks">
+        <a href="#about">About</a><a href="#education">Education</a>
+        <a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero wrap" id="home">
+      <div>
+        <p class="eyebrow">B.Tech CSE Student · Joy University × NIAT</p>
+        <h1>Hi, I'm<br><span>Vuppu Jayavardhan.</span></h1>
+        <p class="lead">I am a Computer Science Engineering student interested in Python, software development, and learning how technology can solve real-world problems. This portfolio documents my learning journey and projects.</p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">Explore my work</a>
+          <a class="btn" href="#contact">Contact me</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="about">
+      <h2>About Me</h2>
+      <p class="sub">A student building a strong foundation in computer science.</p>
+      <div class="card">
+        <p>I'm Vuppu Jayavardhan, pursuing a B.Tech in Computer Science Engineering at Joy University in collaboration with NIAT. I am currently developing my programming fundamentals and exploring Python and web technologies. I believe in learning by building, practising consistently, and improving one project at a time.</p>
+      </div>
+    </section>
+
+    <section class="section wrap" id="education">
+      <h2>Education</h2>
+      <p class="sub">Academic background</p>
+      <div class="card">
+        <h3>Bachelor of Technology — Computer Science Engineering</h3>
+        <p>Joy University × NIAT</p>
+        <p>Currently pursuing · First year</p>
+      </div>
+    </section>
+
+    <section class="section wrap" id="skills">
+      <h2>Skills & Learning</h2>
+      <p class="sub">Update this section as you gain practical experience.</p>
+      <div class="card">
+        <div class="tags">
+          <span class="tag">Python — Learning</span>
+          <span class="tag">HTML — Learning</span>
+          <span class="tag">CSS — Learning</span>
+          <span class="tag">Problem Solving — Developing</span>
+        </div>
+        <p style="margin-top:16px">Only keep technologies here that you are actively learning or can explain. Replace “Learning” with your actual proficiency as you progress.</p>
+      </div>
+    </section>
+
+    <section class="section wrap" id="projects">
+      <h2>Projects</h2>
+      <p class="sub">A place to showcase work as you complete it.</p>
+      <div class="grid">
+        <article class="card">
+          <h3>Personal Portfolio Website</h3>
+          <p>A responsive personal website created to introduce my education, learning interests, and future projects.</p>
+          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">AI-assisted development</span></div>
+        </article>
+        <article class="card">
+          <h3>Python Explainer Project</h3>
+          <p>A beginner-friendly explanation of Python loops, with examples and supporting documentation.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Programming fundamentals</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section wrap contact" id="contact">
+      <h2>Let's Connect</h2>
+      <p class="sub">For academic, project, and learning-related connections.</p>
+      <div class="card">
+        <p><strong>Email:</strong> <a href="mailto:jayavardhanvuppu1@gmail.com">jayavardhanvuppu1@gmail.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/vuppu-jayavardhan-8130bb432" target="_blank" rel="noopener noreferrer">linkedin.com/in/vuppu-jayavardhan-8130bb432</a></p>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap">© <span id="year"></span> Vuppu Jayavardhan. Built as a student portfolio.</div></footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
