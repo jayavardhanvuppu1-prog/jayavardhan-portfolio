@@ -1,144 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio of Vuppu Jayavardhan, B.Tech Computer Science Engineering student." />
-  <title>Vuppu Jayavardhan | Student Portfolio</title>
-  <style>
-    :root {
-      --bg: #080d18; --panel: #101a2b; --text: #edf3ff; --muted: #a8b5ca;
-      --accent: #64b5ff; --accent2: #8b7cff; --line: rgba(255,255,255,.10);
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif;
-      color: var(--text); background:
-        radial-gradient(circle at 85% 10%, rgba(100,181,255,.15), transparent 28rem),
-        radial-gradient(circle at 10% 35%, rgba(139,124,255,.12), transparent 25rem), var(--bg);
-      line-height: 1.65;
-    }
-    a { color: inherit; text-decoration: none; }
-    .wrap { width: min(1080px, 90%); margin: auto; }
-    header { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(16px); background: rgba(8,13,24,.82); border-bottom: 1px solid var(--line); }
-    nav { min-height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-    .brand { font-weight: 800; letter-spacing: .3px; }
-    .brand span { color: var(--accent); }
-    .navlinks { display: flex; gap: 22px; flex-wrap: wrap; color: var(--muted); font-size: .92rem; }
-    .navlinks a:hover { color: var(--accent); }
-    .hero { min-height: 78vh; display: grid; align-items: center; padding: 90px 0 70px; }
-    .eyebrow { color: var(--accent); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: .78rem; }
-    h1 { font-size: clamp(2.6rem, 7vw, 5.2rem); line-height: 1.08; margin: 18px 0; letter-spacing: -2px; }
-    h1 span { background: linear-gradient(90deg, var(--accent), #b5aaff); -webkit-background-clip: text; color: transparent; }
-    .lead { color: var(--muted); max-width: 650px; font-size: 1.12rem; }
-    .actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 30px; }
-    .btn { display: inline-flex; padding: 11px 19px; border-radius: 10px; font-weight: 700; border: 1px solid var(--line); }
-    .primary { color: #07111f; background: linear-gradient(100deg, var(--accent), #a9a0ff); border: 0; }
-    .section { padding: 72px 0; }
-    .section h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 10px; }
-    .sub { color: var(--muted); margin-bottom: 28px; }
-    .grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; }
-    .card { background: linear-gradient(145deg, rgba(16,26,43,.96), rgba(13,21,36,.88)); border: 1px solid var(--line); border-radius: 18px; padding: 24px; }
-    .card h3 { margin-bottom: 8px; }
-    .card p, .card li { color: var(--muted); }
-    .tags { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 14px; }
-    .tag { font-size: .85rem; color: #c9ddf7; border: 1px solid rgba(100,181,255,.25); background: rgba(100,181,255,.08); padding: 5px 11px; border-radius: 99px; }
-    ul { padding-left: 20px; }
-    .contact a { color: var(--accent); overflow-wrap: anywhere; }
-    footer { border-top: 1px solid var(--line); padding: 24px 0; color: var(--muted); text-align: center; font-size: .9rem; }
-    @media (max-width: 700px) {
-      nav { align-items: flex-start; flex-direction: column; padding: 14px 0; }
-      .navlinks { gap: 13px; font-size: .85rem; }
-      .hero { min-height: 68vh; padding-top: 65px; }
-      .grid { grid-template-columns: 1fr; }
-      h1 { letter-spacing: -1px; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portfolio of Vuppu Jayavardhan, Computer Science Engineering student and aspiring software developer.">
+<title>Vuppu Jayavardhan | Portfolio</title>
+
+<style>
+:root {
+  --bg: #080d18;
+  --panel: #111a2b;
+  --text: #f4f7ff;
+  --muted: #a4afc3;
+  --accent: #70a5ff;
+  --border: #26334a;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+}
+a { color: inherit; text-decoration: none; }
+.container { width: min(1100px, 90%); margin: auto; }
+header {
+  position: sticky; top: 0; z-index: 10;
+  background: rgba(8,13,24,.94);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+}
+nav {
+  min-height: 70px;
+  display: flex; justify-content: space-between;
+  align-items: center; gap: 20px;
+}
+.logo { font-size: 21px; font-weight: bold; }
+.logo span, .accent { color: var(--accent); }
+.nav-links { display: flex; gap: 20px; flex-wrap: wrap; }
+.nav-links a { color: var(--muted); font-size: 13px; }
+.nav-links a:hover { color: var(--accent); }
+section { padding: 85px 0; scroll-margin-top: 65px; }
+.hero {
+  min-height: 590px;
+  display: flex; align-items: center;
+}
+.hero-content { max-width: 760px; }
+.tag {
+  display: inline-block; color: var(--accent);
+  border: 1px solid var(--border);
+  border-radius: 30px; padding: 6px 15px;
+  font-size: 13px; margin-bottom: 24px;
+}
+h1 { font-size: clamp(38px, 7vw, 68px); line-height: 1.12; }
+h2 { font-size: 32px; margin-bottom: 12px; }
+h3 { font-size: 19px; margin-bottom: 10px; }
+p { color: var(--muted); margin: 12px 0; }
+.section-intro { max-width: 650px; margin-bottom: 30px; }
+.buttons { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px; }
+.btn {
+  display: inline-block; padding: 12px 22px;
+  border-radius: 8px; background: var(--accent);
+  color: #07101f; font-weight: bold;
+}
+.btn.secondary {
+  color: var(--text); background: transparent;
+  border: 1px solid var(--border);
+}
+.grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+.card {
+  background: var(--panel); padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  transition: transform .25s, border-color .25s;
+}
+.card:hover { transform: translateY(-5px); border-color: var(--accent); }
+.skills { display: flex; flex-wrap: wrap; gap: 10px; }
+.skill {
+  padding: 9px 14px; background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px; color: var(--muted); font-size: 14px;
+}
+footer {
+  padding: 28px 0; text-align: center;
+  border-top: 1px solid var(--border);
+  color: var(--muted); font-size: 13px;
+}
+@media(max-width:700px) {
+  nav { align-items: flex-start; flex-direction: column; padding: 14px 0; }
+  .nav-links { gap: 13px; }
+  .grid { grid-template-columns: 1fr; }
+  section { padding: 65px 0; }
+  .hero { min-height: 520px; }
+}
+</style>
 </head>
+
 <body>
-  <header>
-    <nav class="wrap">
-      <a class="brand" href="#home">VJ<span>.</span></a>
-      <div class="navlinks">
-        <a href="#about">About</a><a href="#education">Education</a>
-        <a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
-      </div>
-    </nav>
-  </header>
+<header>
+  <nav class="container">
+    <a class="logo" href="#home">JV<span>.</span></a>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
 
-  <main>
-    <section class="hero wrap" id="home">
-      <div>
-        <p class="eyebrow">B.Tech CSE Student · Joy University × NIAT</p>
-        <h1>Hi, I'm<br><span>Vuppu Jayavardhan.</span></h1>
-        <p class="lead">I am a Computer Science Engineering student interested in Python, software development, and learning how technology can solve real-world problems. This portfolio documents my learning journey and projects.</p>
-        <div class="actions">
-          <a class="btn primary" href="#projects">Explore my work</a>
-          <a class="btn" href="#contact">Contact me</a>
-        </div>
-      </div>
-    </section>
+<main>
+<section class="hero container" id="home">
+  <div class="hero-content">
+    <span class="tag">Computer Science Engineering Student</span>
+    <h1>Hi, I'm <span class="accent">Vuppu Jayavardhan.</span></h1>
+    <h2 style="font-size:25px;margin-top:18px;">Aspiring Software Developer</h2>
+    <p>Exploring technology, developing programming skills, and turning ideas into meaningful digital experiences.</p>
+    <div class="buttons">
+      <a class="btn" href="#projects">Explore My Work</a>
+      <a class="btn secondary" href="#contact">Get In Touch</a>
+    </div>
+  </div>
+</section>
 
-    <section class="section wrap" id="about">
-      <h2>About Me</h2>
-      <p class="sub">A student building a strong foundation in computer science.</p>
+<section id="about">
+  <div class="container">
+    <h2>About <span class="accent">Me</span></h2>
+    <div class="section-intro">
+      <p>I am a first-year Computer Science Engineering student at Joy University in collaboration with NIAT. I am passionate about technology, programming, and continuous learning.</p>
+      <p>I am building my foundation in Python programming, web development, and computer science fundamentals. I enjoy exploring new technologies and learning how software can solve real-world problems.</p>
+      <p>My goal is to grow into a skilled software developer through consistent learning, practical projects, creativity, and problem-solving.</p>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="container">
+    <h2>My <span class="accent">Education</span></h2>
+    <div class="card">
+      <h3>Bachelor of Technology</h3>
+      <p class="accent">Computer Science and Engineering</p>
+      <p>Joy University | In collaboration with NIAT</p>
+      <p>First-Year Undergraduate Student</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container">
+    <h2>Technical <span class="accent">Skills</span></h2>
+    <p class="section-intro">Technologies and subjects I am currently learning and developing.</p>
+    <div class="skills">
+      <span class="skill">Python – Beginner</span>
+      <span class="skill">HTML – Learning</span>
+      <span class="skill">CSS – Learning</span>
+      <span class="skill">Web Development – Learning</span>
+      <span class="skill">Computer Science Fundamentals</span>
+      <span class="skill">Problem Solving – Developing</span>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <h2>My <span class="accent">Projects</span></h2>
+    <p class="section-intro">My learning journey through practical projects and programming exercises.</p>
+    <div class="grid">
+      <article class="card">
+        <h3>Personal Portfolio Website</h3>
+        <p>A personal website presenting my education, interests, developing skills, and projects.</p>
+        <p><strong>Technologies:</strong> HTML, CSS</p>
+        <p class="accent">Status: In progress</p>
+      </article>
+      <article class="card">
+        <h3>Python Programming Exercises</h3>
+        <p>Beginner-level Python practice covering loops, conditions, and programming fundamentals.</p>
+        <p><strong>Technology:</strong> Python</p>
+        <p class="accent">Status: Learning and practice</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="achievements">
+  <div class="container">
+    <h2>Achievements & <span class="accent">Milestones</span></h2>
+    <div class="card">
+      <h3>My Learning Journey</h3>
+      <p>Beginning my undergraduate journey in Computer Science Engineering and developing technical skills through continuous learning and practical work.</p>
+      <p>More verified achievements, certifications, and project milestones will be added as I accomplish them.</p>
+    </div>
+  </div>
+</section>
+
+<section id="goals">
+  <div class="container">
+    <h2>Career <span class="accent">Interests & Goals</span></h2>
+    <div class="grid">
       <div class="card">
-        <p>I'm Vuppu Jayavardhan, pursuing a B.Tech in Computer Science Engineering at Joy University in collaboration with NIAT. I am currently developing my programming fundamentals and exploring Python and web technologies. I believe in learning by building, practising consistently, and improving one project at a time.</p>
+        <h3>Areas of Interest</h3>
+        <p>Software Engineering</p>
+        <p>Artificial Intelligence</p>
+        <p>Web Application Development</p>
+        <p>Technology Innovation</p>
       </div>
-    </section>
-
-    <section class="section wrap" id="education">
-      <h2>Education</h2>
-      <p class="sub">Academic background</p>
       <div class="card">
-        <h3>Bachelor of Technology — Computer Science Engineering</h3>
-        <p>Joy University × NIAT</p>
-        <p>Currently pursuing · First year</p>
+        <h3>My Goals</h3>
+        <p>Build strong computer science fundamentals.</p>
+        <p>Create practical and meaningful projects.</p>
+        <p>Improve programming and problem-solving abilities.</p>
+        <p>Continue learning emerging technologies.</p>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section class="section wrap" id="skills">
-      <h2>Skills & Learning</h2>
-      <p class="sub">Update this section as you gain practical experience.</p>
-      <div class="card">
-        <div class="tags">
-          <span class="tag">Python — Learning</span>
-          <span class="tag">HTML — Learning</span>
-          <span class="tag">CSS — Learning</span>
-          <span class="tag">Problem Solving — Developing</span>
-        </div>
-        <p style="margin-top:16px">Only keep technologies here that you are actively learning or can explain. Replace “Learning” with your actual proficiency as you progress.</p>
-      </div>
-    </section>
+<section id="contact">
+  <div class="container">
+    <h2>Let's <span class="accent">Connect</span></h2>
+    <p class="section-intro">I'm interested in connecting with people who share an enthusiasm for technology, learning, and innovation.</p>
+    <div class="card">
+      <p><strong>Email:</strong> <a class="accent" href="mailto:jayavardhanvuppu1@gmail.com">jayavardhanvuppu1@gmail.com</a></p>
+      <p><strong>LinkedIn:</strong> <a class="accent" href="https://www.linkedin.com/in/vuppu-jayavardhan-8130bb432/" target="_blank">Visit my LinkedIn</a></p>
+      <p><strong>GitHub:</strong> <a class="accent" href="https://github.com/jayavardhanvuppu1-prog" target="_blank">Visit my GitHub</a></p>
+    </div>
+  </div>
+</section>
+</main>
 
-    <section class="section wrap" id="projects">
-      <h2>Projects</h2>
-      <p class="sub">A place to showcase work as you complete it.</p>
-      <div class="grid">
-        <article class="card">
-          <h3>Personal Portfolio Website</h3>
-          <p>A responsive personal website created to introduce my education, learning interests, and future projects.</p>
-          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">AI-assisted development</span></div>
-        </article>
-        <article class="card">
-          <h3>Python Explainer Project</h3>
-          <p>A beginner-friendly explanation of Python loops, with examples and supporting documentation.</p>
-          <div class="tags"><span class="tag">Python</span><span class="tag">Programming fundamentals</span></div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section wrap contact" id="contact">
-      <h2>Let's Connect</h2>
-      <p class="sub">For academic, project, and learning-related connections.</p>
-      <div class="card">
-        <p><strong>Email:</strong> <a href="mailto:jayavardhanvuppu1@gmail.com">jayavardhanvuppu1@gmail.com</a></p>
-        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/vuppu-jayavardhan-8130bb432" target="_blank" rel="noopener noreferrer">linkedin.com/in/vuppu-jayavardhan-8130bb432</a></p>
-      </div>
-    </section>
-  </main>
-  <footer><div class="wrap">© <span id="year"></span> Vuppu Jayavardhan. Built as a student portfolio.</div></footer>
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<footer>
+  <div class="container">
+    <p>Designed and developed by Vuppu Jayavardhan</p>
+    <p>© 2026 | Personal Portfolio</p>
+  </div>
+</footer>
 </body>
 </html>
